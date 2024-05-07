@@ -45,7 +45,8 @@ def main():
             video = YouTube(link).streams.get_highest_resolution()
         except:
             with open("errors.txt", "w") as errors:
-                errors.write(f"C:    {video.title}")
+                errors.write(f"C:    {link}")
+                continue
 
         message(video.title, i)
 
@@ -54,6 +55,7 @@ def main():
         except:
             with open("errors.txt", "w") as errors:
                 errors.write(f"D:    {video.title}")
+                continue
 
         i += 1
 
