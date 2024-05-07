@@ -60,6 +60,7 @@ def main():
         i += 1
 
     message("Done!", i)
+    input()
 
 if __name__ == "__main__":
     main()
